@@ -9,10 +9,10 @@ MATLAB implementation of "[Single Image Haze Removal Using Dark Channel Prior][1
 	Oral Best Paper Award
 
 Test Image:
-<img src="https://raw.githubusercontent.com/sjtrny/Dark-Channel-Haze-Removal/master/forest.jpg" width="200px"/>
+<img src="https://raw.githubusercontent.com/TanayNarshana/Single-Image-Dehazing-1/master/img.jpg" width="200px"/>
 &nbsp;
 Output Image:
-<img src="https://raw.githubusercontent.com/sjtrny/Dark-Channel-Haze-Removal/master/forest_recovered.jpg" width="200px"/>
+<img src="https://raw.githubusercontent.com/TanayNarshana/Single-Image-Dehazing-1/master/output.jpg" width="200px"/>
 
 [1]: http://kaiminghe.com/publications/cvpr09.pdf
 
