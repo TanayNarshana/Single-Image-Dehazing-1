@@ -3,7 +3,6 @@ function [ A ] = AirLight( I, J )
 %   Detailed explanation goes here
 [m,n] = size(J);
 searchPixels = floor(0.001*m*n);
-newline;
 Jarray = reshape(J,m*n,1);
 Iarray = reshape(I,m*n,3);
 [~,Indices] = sort(Jarray,'descend');
@@ -16,6 +15,6 @@ for i=1:searchPixels
         INDEX = Indices(i);
     end
 end
-A = Iarray(INDEX,:);
+A = uint8(Iarray(INDEX,:));
 end
 

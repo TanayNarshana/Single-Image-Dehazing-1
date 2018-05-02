@@ -5,16 +5,17 @@ function [ J ] = DarkChannel( I, patchSizeC, patchSizeR )
 p = floor(patchSizeR/2);
 q = floor(patchSizeC/2);
 [m,n,t] = size(I);
-J = zeros(m,n);
+J = uint8(zeros(m,n));
 for i = 1:m
     for j = 1:n
-        x = I(max(1,i-p):min(m,i+p),max(1,j-q):min(n,j+q),:);
-        for k = 1:t
-            x = min(x);
-        end
-        J(i,j) = x;
+%         x = I(max(1,i-p):min(m,i+p),max(1,j-q):min(n,j+q),:);
+%         for k = 1:t
+%             x = min(x);
+%         end
+%         J(i,j) = x;
+          J(i,j) = min(min(min(I(max(1,i-p):min(m,i+p),max(1,j-q):min(n,j+q),:))));
     end
 end
-J = J;
+J = imguidedfilter(J,I);
 end
 
